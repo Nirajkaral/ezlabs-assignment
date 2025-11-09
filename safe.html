@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Survey</title>
+    <style>
+        /* Basic styles for the entire page */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container for the form to center it and give it a nice card look */
+        .survey-container {
+            max-width: 750px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styles for the introduction text */
+        .intro-text {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .intro-text h1 {
+            color: #005a9c;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for each question group */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        /* Styling for labels and legends (the question text) */
+        label,
+        legend {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* General style for text inputs and textareas */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Important for padding and width to work together */
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Container for checkbox and radio button options */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        
+        .options-grid label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #eee;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        
+        /* Special container for the 1-10 rating scale */
+        .rating-scale {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        
+        .rating-scale label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        /* Submit Button Style */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="survey-container">
+        <div class="intro-text">
+            <h1>Mental Health Survey</h1>
+            <p>This survey is for use in schools for years 7-13 and should take no more than a few minutes.</p>
+            <p>We would like to know your opinions about mental health training and the issues young people face.</p>
+            <p><strong>Don't worry, it's totally anonymous so please be honest.</strong></p>
+        </div>
+
+        <form action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="school-name">What is the name of your school?</label>
+                <input type="text" id="school-name" name="school_name" placeholder="Enter your school name">
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Select your age</legend>
+                    <div class="options-grid">
+                        <label><input type="radio" name="age" value="12"> 12 Yrs</label>
+                        <label><input type="radio" name="age" value="13"> 13 Yrs</label>
+                        <label><input type="radio" name="age" value="14"> 14 Yrs</label>
+                        <label><input type="radio" name="age" value="15"> 15 Yrs</label>
+                        <label><input type="radio" name="age" value="16"> 16 Yrs</label>
+                        <label><input type="radio" name="age" value="17"> 17 Yrs</label>
+                        <label><input type="radio" name="age" value="18"> 18 Yrs</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Please select your passcode</legend>
+                    <div class="options-grid">
+                         <label><input type="radio" name="passcode" value="SE10"> SE10</label>
+                         <label><input type="radio" name="passcode" value="SE12"> SE12</label>
+                         <label><input type="radio" name="passcode" value="SE13"> SE13</label>
+                         <label><input type="radio" name="passcode" value="SE18"> SE18</label>
+                         <label><input type="radio" name="passcode" value="SE2"> SE2</label>
+                         <label><input type="radio" name="passcode" value="SE28"> SE28</label>
+                         <label><input type="radio" name="passcode" value="SE3"> SE3</label>
+                         <label><input type="radio" name="passcode" value="SE7"> SE7</label>
+                         <label><input type="radio" name="passcode" value="SE8"> SE8</label>
+                         <label><input type="radio" name="passcode" value="SE9"> SE9</label>
+                         <label><input type="radio" name="passcode" value="BR7"> BR7</label>
+                         <label><input type="radio" name="passcode" value="DA15"> DA15</label>
+                         <label><input type="radio" name="passcode" value="DA16"> DA16</label>
+                         <label><input type="radio" name="passcode" value="out_of_borough"> Out of Borough</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Please select your gender</legend>
+                    <div class="options-grid">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="non-binary"> Non-binary</label>
+                        <label><input type="radio" name="gender" value="prefer_not_to_say"> Prefer not to say</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Please tell us your ethnicity</legend>
+                    <div class="options-grid">
+                        <label><input type="radio" name="ethnicity" value="white_british"> White British</label>
+                        <label><input type="radio" name="ethnicity" value="black"> Black</label>
+                        <label><input type="radio" name="ethnicity" value="mixed"> Mixed</label>
+                        <label><input type="radio" name="ethnicity" value="not_known"> Not known</label>
+                        <label><input type="radio" name="ethnicity" value="white_other"> White (Other + Irish)</label>
+                        <label><input type="radio" name="ethnicity" value="asian"> Asian</label>
+                        <label><input type="radio" name="ethnicity" value="other"> Other Ethnicity</label>
+                        <label><input type="radio" name="ethnicity" value="prefer_not_to_say"> Prefer Not To Say</label>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <div class="form-group">
+                <label>How would you rate your understanding of Mental Health Issues? (1=Low, 10=High)</label>
+                <div class="rating-scale">
+                    <label>1<input type="radio" name="understanding_rating" value="1"></label>
+                    <label>2<input type="radio" name="understanding_rating" value="2"></label>
+                    <label>3<input type="radio" name="understanding_rating" value="3"></label>
+                    <label>4<input type="radio" name="understanding_rating" value="4"></label>
+                    <label>5<input type="radio" name="understanding_rating" value="5"></label>
+                    <label>6<input type="radio" name="understanding_rating" value="6"></label>
+                    <label>7<input type="radio" name="understanding_rating" value="7"></label>
+                    <label>8<input type="radio" name="understanding_rating" value="8"></label>
+                    <label>9<input type="radio" name="understanding_rating" value="9"></label>
+                    <label>10<input type="radio" name="understanding_rating" value="10"></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>What topics are most interesting to learn about? (Select all that apply)</legend>
+                     <div class="options-grid">
+                        <label><input type="checkbox" name="topics" value="a_and_d"> Anxiety and Depression</label>
+                        <label><input type="checkbox" name="topics" value="stress"> Stress</label>
+                        <label><input type="checkbox" name="topics" value="ed"> Eating Disorders (ED)</label>
+                        <label><input type="checkbox" name="topics" value="fmsa"> Family/Social Media Anxiety (FMSA)</label>
+                        <label><input type="checkbox" name="topics" value="sh"> Self-Harm (SH)</label>
+                        <label><input type="checkbox" name="topics" value="sa"> Social Anxiety (SA)</label>
+                        <label><input type="checkbox" name="topics" value="sm_pr"> Social Media and Peer Relations (SM & PR)</label>
+                        <label><input type="checkbox" name="topics" value="mh"> General Mental Health (MH)</label>
+                        <label><input type="checkbox" name="topics" value="das"> Drugs and Alcohol Support (DAS)</label>
+                        <label><input type="checkbox" name="topics" value="sar"> Suicide and Risk (SAR)</label>
+                        <label><input type="checkbox" name="topics" value="other"> Other</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <label for="additional-topics">Are there any mental health topics we have not included that you would like to learn more about?</label>
+                <textarea id="additional-topics" name="additional_topics" placeholder="Type your suggestions here..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Survey</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+.form{
+    margin: auto;
+    background-color: white;
+    width: 500px;
+ 
+  
+}
+
+.form-control{
+    text-align: center;
+    background-color: green;
+    width: 700px;
+    height: 700px;
+
+}
+
+h1{
+    text-align: center;
+}
